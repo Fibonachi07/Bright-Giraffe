@@ -45,6 +45,10 @@ li{
     font-weight: 800;
 }
 
+input{
+    border: none;
+}
+
 
 .header{
     background-color: var(--clr-primary);
@@ -251,7 +255,6 @@ li{
 }
 
 .grid__container p{
-    width: 40ch;
     font-family: var(--ff-secondary);
     font-size: 1.3rem;
     font-weight: 300;
@@ -263,6 +266,10 @@ li{
 .bookkeeping{
     grid-area: bookkeeping;
 
+}
+
+.bookkeeping p{
+    max-width: fit-content;
 }
 
 .payroll{
@@ -293,7 +300,8 @@ li{
 
 .grid__container--team{
     display: grid;
-    gap: 2rem;
+    column-gap: 5rem;
+    row-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 50px 50px 1fr 1fr 1fr;
     grid-template-areas: 
@@ -307,6 +315,7 @@ li{
 .container__one{
     grid-area: Megan;
     justify-content: flex-end;
+    margin-top: 2rem;
 }
 
 .container__two{
@@ -317,10 +326,12 @@ li{
 .container__three{
     grid-area: Cathie;
     justify-content: flex-end;
+    margin-bottom: 2rem;
 }
 
 .container__four{
     grid-area: Esther;
+    margin-top: 2rem;
 }
 
 .container__five{
@@ -329,6 +340,7 @@ li{
 
 .container__six{
     grid-area: Maria;
+    margin-bottom: 2rem;
 }
 
 .grid__container--team h2{
@@ -366,7 +378,7 @@ li{
 
 .container__team div{
     align-self: center;
-    padding: 0 2rem;
+    padding-inline: 2rem;
 }
 
 .container__team h5{
@@ -382,8 +394,7 @@ li{
 
 .container__team p{
     font-family: var(--ff-secondary);
-    font-size: 0.9rem;
-    width: 25ch;
+    font-size: 1rem;
     margin-top: 20px;
 }
 
@@ -435,4 +446,199 @@ li{
 .brands img{
     width: 150px;
     object-fit: contain;
+}
+
+.contact{
+    background-color: var(--clr-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__container{
+    display: flex;
+    justify-content: center;
+}
+
+.contact__form--title{
+    font-family: var(--ff-secondary);
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+.contact__form--subtitle{
+    font-family: var(--ff-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    padding-left: 3rem;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    gap: 3rem;
+    min-height: 30vh ;
+    margin-top: 3rem;
+}
+
+form label, form input{
+    font-size: 1.75rem;
+    margin-left: 2rem;
+}
+
+form label{
+    font-family: var(--ff-primary);
+}
+
+form input{
+    border-bottom: 2px solid var(--clr-accent);
+    border-radius: 100vh;
+}
+
+form input::placeholder{
+    font-style: italic;
+    padding-left: 1rem;
+    opacity: .6;
+}
+
+form button{
+    font-family: var(--ff-secondary);
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-flex;
+    width: max-content;
+    align-self: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 100vw;
+    background-color: var(--clr-secondary);
+    cursor: pointer;
+    transition: background-color 800ms;
+}
+
+form button:hover{
+    background-color: var(--clr-accent);
+}
+
+.contact__info{
+    padding-left: 4rem;
+}
+
+.contact__info--img-1{
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin-block: 2rem;
+}
+
+.contact__info--info{
+    display: flex;
+    align-items: center;
+}
+
+.contact__info--links {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__info--links h5{
+    font-family: var(--ff-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.contact__info--links p{
+    font-family: var(--ff-secondary);
+    font-size: 1.2rem;
+}
+
+.contact__info--links p:not(:last-child){
+    font-family: var(--ff-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact__info--icons{
+    display: flex;
+   gap: 1rem;
+}
+
+.facebook{
+    color: hsl(220, 44%, 41%);
+}
+
+.linkedIn{
+    color: hsl(199, 84%, 35%);
+}
+
+.skype{
+    color: hsl(196, 100%, 47%) !important;
+}
+
+
+@media screen and (max-width: 1331px) {
+    .hero__video, .video__container{
+        display: none;
+    }
+
+    .about_us{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .services .grid__container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        'our our'
+        'bookkeeping talent_business'
+        'payroll it_admin';
+    }
+
+    .photo{
+        display: none;
+    } 
+
+    .left span, .middle span{
+        padding-inline: 2rem;
+    }
+
+    .right p{
+         width:100%;
+         font-size: smaller;
+    }
+
+    .contact__info--info{
+        width: max-content;
+        max-width: fit-content;
+
+    }
+}
+
+@media screen and (max-width: 905px) {
+    .grid__container--team{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 50px 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'our_team'
+        'quote'
+        'Megan'      
+        'Esther'
+        'Marti'     
+        'Eugenie'
+        'Cathie'
+        'Maria';
+    }
+
+    .right p{
+        width:100%;
+        font-size: 1rem;
+   }
 }
