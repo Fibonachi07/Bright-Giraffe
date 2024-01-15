@@ -361,11 +361,13 @@ input{
 .container__team{
     display: flex;
     flex-basis: 200px;
+    border-bottom: 2px solid var(--clr-accent);
 
 }
 
 .container__team img{
     width: 200px;
+    min-width: 150px;
     aspect-ratio: 1;
     object-fit: cover;
     border: 5px double var(--clr-accent);
@@ -374,7 +376,7 @@ input{
 
 .container__team div{
     align-self: center;
-    padding-inline: 2rem;
+    padding-inline: 1rem;
 }
 
 .container__team h5{
@@ -575,6 +577,18 @@ form button:hover{
     color: hsl(196, 100%, 47%) !important;
 }
 
+footer{
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer > p{
+    font-family: var(--ff-secondary);
+    font-weight: 600;
+}
+
 
 @media screen and (max-width: 1331px) {
 
@@ -720,6 +734,16 @@ form button:hover{
 
     .grid__container--team > p {
         padding: 0;
+    }
+
+    footer{
+        height: auto;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    footer .first{
+        padding-top: 0.7rem;
     }
 
 }
