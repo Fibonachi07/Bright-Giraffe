@@ -239,7 +239,7 @@ html, body{
 }
 
 .services_h2{
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-primary);
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.3rem;
@@ -344,7 +344,7 @@ html, body{
 }
 
 .grid__container--team h2{
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-primary);
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.3rem;
@@ -402,7 +402,7 @@ html, body{
 }
 
 .software_tech h2{
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-primary);
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: 0.3rem;
@@ -468,7 +468,7 @@ html, body{
 }
 
 .contact__form--title{
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-primary);
     font-size: 2rem;
     letter-spacing: 0.3rem;
     padding-top: 2rem;
@@ -481,7 +481,7 @@ html, body{
     font-weight: 600;
     letter-spacing: 0.3rem;
     padding-top: 2rem;
-    padding-left: 3.5rem;
+    padding-left: 3.1rem;
 }
 
 form{
@@ -503,11 +503,14 @@ form label{
 form input{
     border-bottom: 2px solid var(--clr-accent);
     border-radius: 100vh;
+    margin-left: 1rem;
+    padding-left: 0.5rem;
 }
 
 form input::placeholder{
     font-style: italic;
-    padding-left: 1rem;
+    font-size: 1.5rem;
+    padding-left: 0.6rem;
     opacity: .6;
 }
 
@@ -744,6 +747,7 @@ footer > p{
     footer{
         height: auto;
         flex-direction: column;
+        text-align: center;
         gap: 1rem;
     }
 
